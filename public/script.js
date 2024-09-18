@@ -56,6 +56,7 @@ function searchName() {
         resultDiv.innerHTML = `<p><strong>Name:</strong> ${found["Name"]}</p>
                                <p><strong>Signed Up By:</strong> ${found.Signed_Up_Email}</p>
                                <p><strong>Year:</strong> ${found.Year}</p>
+                               <p><strong>Membership Card:</strong> ${found.Card}</p>
                                <p><strong>Table:</strong> ${found.Table}</p>`;
 
         if (!signedUpPeople.includes(found["Name"])) {
