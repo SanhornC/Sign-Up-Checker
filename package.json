@@ -1,0 +1,15 @@
+{
+  "name": "sign-up-checker",
+  "version": "1.0.0",
+  "description": "A sign up checker that checks whether an attendee has signed up for the event\r Live Demo: https://signupchecker-7646c.web.app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Sign-Up-Checker"
+  },
+  "author": "Sanhorn, Sean",
+  "license": "ISC"
+}
