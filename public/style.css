@@ -1,93 +1,95 @@
-/* General styling */
-body {
+:root {
+    --background-color: #e5d0bd;
+    --text-color: #8C6A48;
+    --card-background-color: #F4E6D7;
+    --input-background-color: #D9D9D9;
+    --input-text-color: #404040;
+}
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ceb195;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+body {
+    overflow-x: hidden;
+    font-family: "SUSE", sans-serif;
+}
 .container {
-    display: flex;
-    width: 90%;
-    height: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
 }
-
-
-.left {
-    flex: 1;
-    background-color: #f4e6d7; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.circle {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    z-index: 1;
 }
-
-
-.right {
-    flex: 1;
-    background-color: #ceb195;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+.circle:nth-child(2) {
+    top: -50%;
+    left: -25%;
 }
-
-
-.search-container, .result-container {
-    text-align: center;
+.circle:nth-child(3) {
+    bottom: -50%;
+    right: -25%;
 }
-
-input[type="file"],
-input[type="text"],
-button {
-    display: block;
-    width: 70%;
-    margin: 15px auto;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    background-color: #8c6a48;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover{
-    color: black;
-}
-
-button:disabled {
-    background-color: #d3bfa9;
-    cursor: not-allowed;
-}
-
-
-#result p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-h2 {
-    color: #8c6a48;
-}
-
-.counter-container {
-    width: 100%;
-    text-align: center;
+.check-in-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    height: 70%;
     padding: 20px;
-    background-color: #ceb195;
-    font-size: 18px;
-    color: black;
-    margin-top: auto; 
-    position: fixed; 
-    bottom: 0;       
-    right: 0;
+    background-color: var(--card-background-color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
 }
-
-
+.check-in-card h2 {
+    color: var(--text-color);
+    font-size: 48px;
+    font-weight: 800;
+}
+.check-in-card input {
+    width: 65%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    border: none;
+    color: var(--input-text-color);
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "SUSE", sans-serif;
+    background-color: var(--input-background-color);
+}
+#search::placeholder {
+    color: var(--input-text-color);
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "SUSE", sans-serif;
+}
+.check-in-card button {
+    width: 280px;
+    height: 60px;
+    background-color: var(--text-color);
+    color: var(--card-background-color);
+    font-size: 24px;
+    font-weight: 800;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .25s;
+}
+.check-in-card button:hover {
+    filter: brightness(.9);
+}
