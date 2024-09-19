@@ -5,34 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Sign-Up Search</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        
-        <div class="left">
-            <div class="search-container">
-                <h2>Attendees Sign-Up Search</h2>
-                <p>Upload your Excel file with the sign-up list (you only need to upload it once):</p>
-                <input type="file" id="fileUpload" accept=".xlsx, .xls" />
-                <input type="text" id="nameInput" placeholder="Enter name" disabled />
-                <button onclick="searchName()" disabled>Search</button>
-            </div>
+        <div class="check-in-card">
+            <h2>TSA Mid-Autumn BBQ Event Check-In</h2>
+            <input type="text" id="search" placeholder="Enter your NetId">
+            <button id="search-button">Check In</button>
         </div>
-
-        
-        <div class="right">
-            <div class="result-container">
-                <h3><u>Search Result</u></h3>
-                <div id="result"></div>
-            </div>
-        </div>
+        <div class="circle"></div>
+        <div class="circle"></div>
     </div>
-
-    <div class="counter-container">
-        <p>Total Number of People Signed In: <span id="totalCount">0</span></p>
-    </div>
-
     
     <script src="script.js"></script>
 </body>

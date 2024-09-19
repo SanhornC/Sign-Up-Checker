@@ -1,0 +1,111 @@
+:root {
+    --background-color: #e5d0bd;
+    --text-color: #8C6A48;
+    --card-background-color: #F4E6D7;
+    --input-background-color: #D9D9D9;
+    --input-text-color: #404040;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    font-family: "SUSE", sans-serif;
+}
+.nav-banner {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: fixed;
+    top: 0;
+}
+.nav-banner h4 {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 800;
+}
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(to right, var(--text-color) 50%, var(--background-color) 50%);
+}
+
+.checkin-list {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.checkin-list-header {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkin-list-header-item {
+    font-size: 20px;
+    font-weight: 800;
+    flex: 33%;
+    text-align: center;
+}
+
+.checkin-list:nth-child(1) .checkin-list-header {
+    background-color: var(--background-color);
+}
+
+.checkin-list:nth-child(1) .checkin-list-header-item {
+    color: var(--text-color);
+}
+
+.checkin-list:nth-child(2) .checkin-list-header {
+    background-color: var(--text-color);
+}
+
+.checkin-list:nth-child(2) .checkin-list-header-item {
+    color: var(--background-color);
+}
+
+.checkin-people-list {
+    width: 80%;
+    height: fit-content;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 0 50px;
+}
+
+.checkin-people {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.checkin-list:nth-child(1) .checkin-people-list {
+    background-color: var(--background-color);
+}
+
+.checkin-list:nth-child(2) .checkin-people-list {
+    background-color: var(--text-color);
+}
