@@ -112,7 +112,7 @@ checkInButton.addEventListener('click', async () => {
     
             // Assuming the NetID is unique and we only get one result
             querySnapshot.forEach(async (doc) => {
-                console.log(doc)
+                // console.log(doc)
                 const participantRef = doc.ref;
     
                 // Update the CheckIn field to "1"
