@@ -148,6 +148,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    z-index: 11;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -185,6 +186,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index: 10;
     transform: translate(-50%, -50%);
 }
 

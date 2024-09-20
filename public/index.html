@@ -8,40 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+
+        <!-- <input type="file" id="csvFileInput" accept=".csv" />
+        <button id="process">Upload and Process CSV</button> -->
+
         <div class="check-in-card">
             <h2 id="checkin-h2">TSA Mid-Autumn BBQ Event Check-In</h2>
             <input type="text" id="search" placeholder="Enter your NetId">
             <button id="search-button">Check In</button>
-            <div id="loading-circle" style="display: none;">
-                <svg width="50" height="50" viewBox="0 0 50 50">
-                    <circle id="circle" cx="25" cy="25" r="20" stroke="black" stroke-width="4" fill="none" stroke-linecap="round">
-                        <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite" />
-                    </circle>
-                </svg>
-            </div>
-            <div class="found-result" id="found-result">
-                <h3>找到你了！</h3>
-                <h4>Name: Sean Liao</h4>
-                <h4>NetId: seanyl2</h4>
-                <h4>Year: Junior</h4>
-                <h4>Membership Card: Yes</h4>
-                <h4>Check-In Time: 14:00:00</h4>
-                <button id="confirm-button">Confirm</button>
-            </div>
-            <div class="not-found-result" id="not-found-result">
-                <img src="./james.jpg" alt="James... or some random stupid guy?">
-                <h3>沒找到你欸，就跟你說要好好打字了</h3>
-                <button id="back-button">Back</button>
-            </div>
         </div>
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
     
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
