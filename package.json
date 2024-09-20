@@ -11,5 +11,9 @@
     "url": "Sign-Up-Checker"
   },
   "author": "Sanhorn, Sean",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.13.2",
+    "papaparse": "^5.4.1"
+  }
 }
