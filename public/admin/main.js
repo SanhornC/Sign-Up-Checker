@@ -1,7 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-import { getDocs, updateDoc, query, collection, where, doc, getFirestore, setDoc } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDocs, collection, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAS93ZcfbigenxgGBksjYQHzt_sBy1BTF8",
@@ -13,9 +11,7 @@ const firebaseConfig = {
   measurementId: "G-CRQV5G53JL"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -39,28 +35,23 @@ async function fetchParticipants() {
     
     querySnapshot.forEach((doc) => {
         const data = doc.data();
-        const { Name, NetId, Table, CheckIn } = data;
-        console.log(data)
-        // Create an HTML structure for each participant
+        const { Name, NetId, Table, Payment } = data;
         const participantElement = document.createElement('div');
-        participantElement.classList.add('checkin-people');
 
+        participantElement.classList.add('checkin-people');
         participantElement.innerHTML = `
         <div class="checkin-list-header-item">${Name}</div>
         <div class="checkin-list-header-item">${NetId}</div>
         <div class="checkin-list-header-item">${Table || 0}</div>
-        <div class="checkin-list-header-item">${CheckIn == '1' ? 'Yes' : 'No'}</div>
+        <div class="checkin-list-header-item">${Payment == '1' ? 'Yes' : 'No'}</div>
         `;
 
-        // Append the participant to the appropriate list based on Checkin status
         if (CheckIn == '1') {
-        document.getElementById('checked-in-list').appendChild(participantElement);
+            document.getElementById('checked-in-list').appendChild(participantElement);
         } else {
-        document.getElementById('not-checked-in-list').appendChild(participantElement);
+            document.getElementById('not-checked-in-list').appendChild(participantElement);
         }
     });
-  }
-  
-  // Call the function to load the data when the page loads
-  window.onload = fetchParticipants;
-  
+}
+
+window.onload = fetchParticipants;
